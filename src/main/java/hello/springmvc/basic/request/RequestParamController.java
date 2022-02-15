@@ -42,5 +42,19 @@ public class RequestParamController {
         return "ok";
     }
 
+    /**
+     * @RequestParam 사용
+     * HTTP 파라미터 이름이 변수 이름과 같으면 @RequestParam(name="xx") 생략 가능
+     * */
+
+    @ResponseBody
+    @RequestMapping("/request-param-v3")
+    public String requestParamV3(
+            @RequestParam String username,
+            @RequestParam int age) {
+        log.info("username={}, age = {}", username, age);
+        return "ok";
+    }
+
 
 }
