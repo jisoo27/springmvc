@@ -56,5 +56,17 @@ public class RequestParamController {
         return "ok";
     }
 
+    /**
+     * @RequestParam 사용
+     * String, int 등의 단순 타입이면 @RequestParam 도 생략 가능
+     * */
+
+    @ResponseBody
+    @RequestMapping("/request-param-v4")
+    public String requestParamV4(String username, int age) {
+        log.info("username={}, age = {}", username, age);
+        return "ok";
+    }
+
 
 }
